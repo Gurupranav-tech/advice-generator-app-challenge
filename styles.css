@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --light-cyan: hsl(193, 38%, 86%);
+  --neon-green: hsl(150, 100%, 66%);
+  --grayish-blue: hsl(217, 19%, 38%);
+  --darkish-blue: hsl(217, 19%, 24%);
+}
+
+body {
+  font-family: 'Manrope', sans-serif;
+  font-weight: 800;
+  background-color: var(--darkish-blue);
+  height: 100vh;
+  font-size: 28px;
+  display: grid;
+  place-items: center;
+}
+
+.container {
+  font-size: 0.8rem;
+  padding: 2.5em;
+  border-radius: 10px;
+  max-width: 400px;
+  background-color: var(--grayish-blue);
+  position: relative;
+  min-width: 400px;
+}
+
+.title {
+  color: var(--neon-green);
+  text-align: center;
+  margin-bottom: 1em;
+}
+
+.title > span {
+  margin-left: 0.5em;
+}
+
+.advice {
+  color: var(--light-cyan);
+  quotes: '“' '”';
+  font-size: 1.5em;
+  padding: 0.3em;
+  margin-bottom: 1em;
+}
+
+.advice > q {
+  width: 100%;
+  display: block;
+}
+
+.design {
+  height: 2.5em;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 1.5em;
+}
+
+.line {
+  width: 50%;
+  height: 0.1px;
+  background-color: var(--light-cyan);
+  margin-right: 20px;
+}
+
+.line:last-child {
+  margin-right: 0;
+  margin-left: 20px;
+}
+
+.rect {
+  width: 2%;
+  height: 75%;
+  margin: 0% 1% 0% 1%;
+  border-radius: 10px;
+  background-color: var(--light-cyan);
+}
+
+.circle {
+  --size: 4em;
+  position: absolute;
+  bottom: calc(0% - var(--size) / 2);
+  left: calc(50% - var(--size) / 2);
+  width: var(--size);
+  height: var(--size);
+  background-color: var(--neon-green);
+  border-radius: 100%;
+  display: grid;
+  place-items: center;
+  transition: box-shadow 50ms ease;
+  cursor: pointer;
+}
+
+.circle:hover,
+.circle:focus {
+  box-shadow: 0em 0em 2em 0.5em hsl(150, 100%, 55%),
+    inset 0em 0em 2em 0.5em hsl(150, 100%, 55%);
+}
+
+.circle::before {
+  --size: 2em;
+  content: '';
+  display: block;
+  position: absolute;
+  width: var(--size);
+  height: var(--size);
+  background-color: var(--darkish-blue);
+  border-radius: 2px;
+}
+
+.holder {
+  z-index: 2;
+  display: grid;
+  gap: 0.2em;
+  column-gap: 0.5em;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.c {
+  --size: 0.3em;
+  width: var(--size);
+  height: var(--size);
+  border-radius: 100%;
+  background-color: var(--neon-green);
+}
+
+.span-two {
+  grid-column: span 2;
+  justify-self: center;
+}
+
+footer {
+  position: absolute;
+  bottom: 1%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+@media screen and (max-width: 414px) {
+  .container {
+    padding: 1em;
+  }
+
+  body {
+    padding-right: 0.5em;
+  }
+
+  .attribution {
+    font-size: 11px;
+    width: 100%;
+  }
+}

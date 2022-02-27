@@ -1,28 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Advice generator app</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
+    <title>Frontend Mentor | Advice generator app</title>
+    <script defer src="app.js"></script>
+    <link rel="stylesheet" href="styles.css" />
 
-  Advice #<!-- Advice ID goes here -->
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+        color: var(--light-cyan);
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <section class="container">
+      <h3 class="title">Advice <span data-id></span></h3>
 
-  "<!-- Advice text goes here -->"
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+      <div class="advice" data-advice>
+        <span>Loading...</span>
+      </div>
+
+      <div class="design">
+        <div class="line"></div>
+        <div class="rect"></div>
+        <div class="rect"></div>
+        <div class="line"></div>
+      </div>
+
+      <div class="circle" data-new-advice>
+        <div class="holder">
+          <div class="c"></div>
+          <div class="c"></div>
+          <div class="c span-two"></div>
+          <div class="c"></div>
+          <div class="c"></div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by
+      <a href="https://www.github.com/Gurupranav-tech" target="_blank"
+        >Guru Pranav</a
+      >.
+    </footer>
+  </body>
 </html>
